@@ -43,8 +43,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
+|name|string|null: false, unique:true|
 
 ### Association
 - has_many :users, through: members
