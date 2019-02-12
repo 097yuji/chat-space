@@ -1,0 +1,32 @@
+
+.confirmation チャットグループが作成されました
+.left-content
+  .user-box
+    %p UserName
+    = link_to(fa_icon("cog"),root_path)
+    = link_to(fa_icon("edit"),root_path)
+  .group-box
+    .group-box__group-name GroupName
+    .group-box__group-message まだメッセージはありません。
+
+
+.right-content
+  .header-box
+    .header-box__right Edit
+    .header-box__left__group-name sampleグループ
+    .header-box__left__members member:okuna,yamada
+
+  .message-box
+    .message-box__name okuna
+    .message-box__time 2019/02/07(Thu) 17:39:09
+    .message-box__comment Hello.
+
+  .footer
+    %form
+      %input-box
+        %input{type:'text',placeholder:'type a message'}
+        %label
+          %i.far.fa-image{:input => "", :type => "file"}
+          %input{type:'file'}
+      %input{type:'submit',class:'send-button',value:'Send'}
+
