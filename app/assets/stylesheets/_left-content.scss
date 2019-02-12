@@ -27,11 +27,11 @@
       background-color: #2f3e51;
       height: calc(100% - 96px);
       color: #FFFFFF;
-      .group-box__group-name{
+      &__group-name{
         padding:20px 20px 0px 20px;
         font-size: 15px;
         }
-      .group-box__group-message{
+      &__group-message{
         padding: 5px 20px 20px 20px;
         font-size: 11px;
         }
