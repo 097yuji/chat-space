@@ -2,13 +2,14 @@
 .confirmation チャットグループが作成されました
 .left-content
   .user-box
-    %p UserName
-    = link_to(fa_icon("cog"),root_path)
-    = link_to(fa_icon("edit"),root_path)
+    = current_user.name
+    = link_to edit_user_path(current_user) do
+      = fa_icon 'cog', class: 'icon'
+    = link_to(fa_icon("pencil-square-o"),root_path)
+
   .group-box
     .group-box__group-name GroupName
     .group-box__group-message まだメッセージはありません。
-
 
 .right-content
   .header-box
