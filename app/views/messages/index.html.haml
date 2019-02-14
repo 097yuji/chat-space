@@ -1,15 +1,7 @@
 
 .confirmation チャットグループが作成されました
-.left-content
-  .user-box
-    = current_user.name
-    = link_to edit_user_path(current_user) do
-      = fa_icon 'cog', class: 'icon'
-    = link_to(fa_icon("pencil-square-o"),root_path)
 
-  .group-box
-    .group-box__group-name GroupName
-    .group-box__group-message まだメッセージはありません。
+= render 'shared/left-content'
 
 .right-content
   .header-box
@@ -27,7 +19,7 @@
       %input-box
         %input{type:'text',placeholder:'type a message'}
         %label
-          %i.far.fa-image{:input => "", :type => "file"}
+          = fa_icon("photo")
           %input{type:'file'}
       %input{type:'submit',class:'send-button',value:'Send'}
 
