@@ -1,10 +1,17 @@
 .right-content{
   width: calc(100vw - 300px);
   float: left;
+  height: 100vh;
+
   .header-box{
+    position: fixed;
+    width: calc(100% - 300px);
+    background-color: white;
+    opacity: 1.0;
     height: 100px;
     border-bottom: 1px solid #eeeeee;
-    padding: 24px 40px 0 40px;
+    padding: 0px 40px 20px 40px;
+    box-sizing: border-box;
 
     &__right{
       height: 40px;
@@ -28,8 +35,11 @@
     }
   }
   .message-box{
-    padding: 6px 40px 0 40px;
-
+    padding: 6px 40px 6px 40px;
+    height: calc(100% - 100px);
+    overflow: scroll;
+    box-sizing: border-box;
+    display: block;
     &__name{
       margin-top:40px;
       margin-bottom:10px;
@@ -49,63 +59,43 @@
       color:#434A54;
     }
   }
-
-  .footer{
-    padding: 0 40px;
+  .form {
     position: fixed;
-    margin-left: 300px;
-    left:0;
-    bottom:0;
-    right:0;
-    background-color:#dddddd;
-
-    form{
-      height:50px;
-      width:100%;
-      margin:20px 0px;
-      vertical-align:middle;
-      float:left;
-      color:black;
-      input-box{
-        width:calc(100% - 115px);
-        float:left;
-        background-color:white;
-        input{
-          display:inline-block;
-          padding-left:10px;
-          outline:0;
-          border:0px;
-          float:left;
-          vertical-align: middle;
-          line-height: 50px;
-        }
-        label{
-          input{
-            display:none;
-          }
-          i{
-          vertical-align: middle;
-          padding-right: 10px;
-          line-height: 50px;
-          float:right;
-          color: black;
-          font-size: 20px;
-          }
-        }
-      }
-      .send-button{
-        margin-left:15px;
-        width:100px;
-        float:right;
+    bottom: 0;
+    width: calc(100% - 300px);
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px 20px 40px;
+    &__message {
+      padding-left: 10px;
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 160px);
+    }
+    &__mask {
+      background-color: white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
         line-height: 50px;
-        vertical-align:middle;
-        padding:0px 20px;
-        background-color:#38AEF0;
-        color:white;
-        text-decoration:none;
-        outline:0;
-        border:0px;
       }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: #38AEF0;
+      border: none;
+      color: white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }

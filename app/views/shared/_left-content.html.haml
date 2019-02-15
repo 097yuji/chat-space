@@ -5,10 +5,11 @@
       = fa_icon 'cog', class: 'icon'
     = link_to new_group_path do
       = fa_icon 'pencil-square-o', class: 'icon'
+  .top-space
   .group-box
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do
         .group-box__group-name
           = group.name
         .group-box__group-message
-          まだメッセージはありません。
+          = group.show_last_message
