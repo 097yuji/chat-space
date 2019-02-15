@@ -5,13 +5,16 @@
   float: left;
 
     .user-box{
+      position: fixed;
+      width: 300px;
       background-color: #253141;
       font-size: 16px;
       font-weight: bold;
       color:#FFFFFF;
       height: 100px;
       line-height: 100px;
-      padding:24px 20px 0px 20px;
+      padding:0px 20px 0px 20px;
+      box-sizing: border-box;
         p{
           float:left;
         }
@@ -23,10 +26,14 @@
           color:white;
         }
       }
+    .top-space{
+      margin-top: 100px;
+    }
     .group-box{
       background-color: #2f3e51;
-      height: calc(100% - 96px);
-
+      overflow: scroll;
+      display: block;
+      height: calc(100vh - 100px);
 
       &__group-name{
         padding:20px 20px 0px 20px;
