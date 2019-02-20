@@ -10,7 +10,7 @@
       Member:
       - @group.users.each do |user|
         = user.name
-  .message-box
+  .messages
     = render @messages
   .form
     = form_for [@group, @message] do |f|
