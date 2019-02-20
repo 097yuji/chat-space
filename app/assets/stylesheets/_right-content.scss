@@ -34,29 +34,31 @@
       margin-top: 15px;
     }
   }
-  .message-box{
+  .messages{
     padding: 6px 40px 6px 40px;
     height: calc(100% - 100px);
     overflow: scroll;
     box-sizing: border-box;
     display: block;
-    &__name{
-      margin-top:40px;
-      margin-bottom:10px;
-      margin-right: 10px;
-      font-size:16px;
-      font-weight: bold;
-      color:#434A54;
-      display: inline-block;
-    }
-    &__time{
-      font-size:12px;
-      color:#999999;
-      display: inline-block;
-    }
-    &__comment{
-      font-size:14px;
-      color:#434A54;
+    .message-box{
+      &__name{
+        margin-top:40px;
+        margin-bottom:10px;
+        margin-right: 10px;
+        font-size:16px;
+        font-weight: bold;
+        color:#434A54;
+        display: inline-block;
+      }
+      &__time{
+        font-size:12px;
+        color:#999999;
+        display: inline-block;
+      }
+      &__comment{
+        font-size:14px;
+        color:#434A54;
+      }
     }
   }
   .form {
