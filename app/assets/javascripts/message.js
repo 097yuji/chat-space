@@ -42,4 +42,24 @@ $(function(){
       alert('error');
     })
   })
+
+  if (location.href.match(/\/groups\/\d+\/messages/)){
+    setInterval(function(){
+      $.ajax({
+        type: 'GET',
+        url: location.href,
+        dataType: 'json'
+      })
+      .done(function(messages){
+        $('.messages').empty();
+        messages.forEach(function(message){
+          var html = buildHTML(message);
+          $('.messages').append(html);
+        });
+      })
+      .fail(function(){
+        alert('自動更新に失敗しました');
+      });
+    },5000)
+  };
 });

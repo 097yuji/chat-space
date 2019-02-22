@@ -1,5 +1,5 @@
 $(function(){
-  function appendUser(user){//名前があった時
+  function appendUser(user){
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
                   <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</a>
@@ -7,7 +7,7 @@ $(function(){
     $('#user-search-result').append(html);
   }
 
-  function appendGruop(name,user_id){//名前がなかった時
+  function appendGruop(name,user_id){
     var html = `<div id='chat-group-users'>
                   <div class='chat-group-user clearfix' id='chat-group-user-22'>
                     <input name='group[user_ids][]' type='hidden' value='${user_id}'>
