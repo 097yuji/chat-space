@@ -4,6 +4,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    respond_to do |format|
+      format.html # html形式でアクセスがあった場合は特に何もなし
+      format.json
+    end
   end
 
   def create
